@@ -1,10 +1,7 @@
 # Don't check auto-generated stuff into git
-coverage
-node_modules
+config/actions.json
+config/jwt.json
+coverage/
+node_modules/
+actions.json
 stats.json
-package-lock.json
-
-# Cruft
-.DS_Store
-npm-debug.log
-.idea
