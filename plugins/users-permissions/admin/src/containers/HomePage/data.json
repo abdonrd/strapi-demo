@@ -33,6 +33,12 @@
       "id": 1
     },
     {
+      "name": "newProvider",
+      "enabled": false,
+      "ico": "newProvider",
+      "id": 5
+    },
+    {
       "name": "facebook",
       "enabled": false,
       "ico": "facebook",

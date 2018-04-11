@@ -107,6 +107,23 @@ const getProfile = async (provider, query, callback) => {
   }).get();
 
   switch (provider) {
+    case 'newProvider':
+      // TODO: Update with the provider logic
+      const newProvider = new Purest({
+        provider: 'google'
+      });
+
+      newProvider.query('plus').get('people/me').auth(access_token).request((err, res, body) => {
+        if (err) {
+          callback(err);
+        } else {
+          callback(null, {
+            username: body.displayName || body.emails[0].value,
+            email: body.emails[0].value
+          });
+        }
+      });
+      break;
     case 'facebook':
       const facebook = new Purest({
         provider: 'facebook'

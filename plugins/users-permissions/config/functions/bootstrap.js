@@ -40,6 +40,13 @@ module.exports = async cb => {
         enabled: true,
         icon: 'envelope'
       },
+      newProvider: {
+        enabled: false,
+        icon: 'newProvider',
+        key: '',
+        secret: '',
+        callback: '/auth/newProvider/callback'
+      },
       facebook: {
         enabled: false,
         icon: 'facebook-official',
